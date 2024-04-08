@@ -20,7 +20,7 @@
 	&__header-container {
 		width: clamp(48rem, 85vw, 62.5rem);
 		margin: 0 auto;
-		margin-top: clamp(5rem, 12vh + 2rem, 11rem);
+		margin-top: clamp(5rem, 12vw + 2rem, 11rem);
 		padding-bottom: clamp(1rem, 3vh + 1rem, 4rem);
 		display: grid;
 		grid-template-columns: 1fr 3fr;
@@ -45,6 +45,10 @@
 		.h2--centered {
 			grid-area: header;
 			margin-bottom: 1rem;
+
+			@media (min-width: 769px) {
+				margin-bottom: 2rem;
+			}
 		}
 
 		&__img {
