@@ -14,7 +14,10 @@ const ContactPage = React.forwardRef((props, ref) => {
 			<main className="contact-content">
 				<section className="contact-content__header-container">
 					<h2 className="h2--centered contact-content__header-container__h2">
-						REACH OUT AND LET’S EXPLORE POSSIBILITIES TOGETHER!
+						REACH OUT AND LET’S EXPLORE
+						<span className="space"> </span>
+						<br className="tablet-break" />
+						POSSIBILITIES TOGETHER!
 					</h2>
 					<div className="contact-content__header-container__img">
 						<img

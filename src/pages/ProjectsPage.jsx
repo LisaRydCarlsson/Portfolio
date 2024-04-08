@@ -70,7 +70,7 @@ const ProjectsPage = React.forwardRef((props, ref) => {
 								<h1>
 									AN E-MAIL CLIENT
 									<span className="space"> </span>
-									<br className="break" />
+									<br className="mobile-break" />
 									FOR SENIORS
 								</h1>
 								<p>

@@ -318,3 +318,11 @@ a {
 		display: block;
 	}
 }
+
+.tablet-break {
+	display: none;
+
+	@media screen and (max-width: $breakpoint-tablet) {
+		display: block;
+	}
+}
