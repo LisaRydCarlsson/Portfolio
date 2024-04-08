@@ -264,7 +264,7 @@
 
 .read-more-section {
 	max-height: 50rem;
-	transition: max-height 0.5s ease-out;
+	transition: max-height 2s ease-in-out;
 
 	@include between($breakpoint-tablet, $breakpoint-small-desktop) {
 		margin-bottom: 2rem;
