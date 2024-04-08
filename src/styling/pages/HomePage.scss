@@ -1,0 +1,154 @@
+// styling/HomePage.scss
+@import "src/index.scss";
+
+.page-wrapper-home {
+	width: clamp(20rem, 100vw, 87.5rem);
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.home-content {
+	flex-grow: 1;
+	overflow: auto;
+	width: clamp(48rem, 85vw, 62.5rem);
+	height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-top: clamp(6rem, 40vh, 27rem);
+	padding-left: clamp(4rem, 5vw, 6rem);
+
+	@media screen and (max-width: $breakpoint-tablet) {
+		width: clamp(18rem, 70vw, 26rem);
+		padding-top: clamp(3rem, 25vh, 18rem);
+		padding-left: 0;
+	}
+
+	&__intro {
+		max-width: clamp(17rem, 60vw, 47rem);
+
+		&__h1 {
+			font-size: clamp(1.5rem, 3.5vw, 2.7rem);
+			font-weight: 700;
+			margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+			padding-left: 0.1rem;
+			line-height: clamp(0.8rem, 2.5vw, 1.2rem);
+
+			@media screen and (max-width: $breakpoint-mobile) {
+				width: 18rem;
+				margin-bottom: 0rem;
+			}
+
+			#cursor {
+				font-weight: 900;
+				animation: blink 1.5s 3 alternate, disappear 1s forwards 4s;
+			}
+		}
+
+		&__p {
+			font-size: clamp(0.85rem, 2.5vw, 1.4rem);
+			line-height: clamp(2rem, 6vw, 3.4rem);
+			letter-spacing: 0.15rem;
+			text-align: left;
+			padding-left: 0.1rem;
+
+			#cursor {
+				font-weight: 900;
+				animation: blink 1.5s 3 alternate, disappear 1s forwards 4s;
+			}
+
+			&__fade-in {
+				opacity: 0;
+				animation: fadeIn 2s ease-in-out forwards;
+				animation-delay: 2.5s;
+
+				@keyframes fadeIn {
+					from {
+						opacity: 0;
+					}
+					to {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		// Type-writer effect
+		@keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+		}
+
+		@keyframes disappear {
+			from {
+				opacity: 1;
+			}
+			to {
+				opacity: 0;
+			}
+		}
+	}
+
+	&__contact-icons {
+		width: clamp(18rem, 50vw, 23rem);
+		display: flex;
+		align-items: flex-start;
+		gap: clamp(0.7rem, 1.6vw, 1.5rem);
+		padding-bottom: clamp(1rem, 10vh, 5rem);
+		padding-left: 0.1rem;
+
+		a img {
+			width: clamp(2rem, 5vw, 3rem);
+			height: auto;
+			cursor: pointer;
+			transition: transform 0.3s;
+			opacity: 0;
+			animation: fadeIn 1s ease-in-out forwards;
+			will-change: transform;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		a:nth-child(1) img {
+			animation-delay: 7s;
+		}
+
+		a:nth-child(2) img {
+			animation-delay: 7.75s;
+		}
+
+		a:nth-child(3) img {
+			animation-delay: 8.5s;
+		}
+
+		a:nth-child(4) img {
+			animation-delay: 9.25s;
+		}
+
+		a:nth-child(5) img {
+			animation-delay: 10s;
+		}
+
+		a:nth-child(6) img {
+			animation-delay: 10.75s;
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}

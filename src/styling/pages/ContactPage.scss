@@ -1,0 +1,176 @@
+// styling/pages/ContactPage.scss
+@import "../../index.scss";
+
+.page-wrapper--contact {
+	width: clamp(20rem, 100vw, 87.5rem);
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-content {
+	width: clamp(20rem, 100vw, 87.5rem);
+	min-height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+
+	&__header-container {
+		width: clamp(48rem, 85vw, 62.5rem);
+		margin: 0 auto;
+		margin-top: clamp(5rem, 12vh + 2rem, 11rem);
+		padding-bottom: clamp(1rem, 3vh + 1rem, 4rem);
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			"header header"
+			"image text";
+		align-items: center;
+		justify-content: center;
+
+		@media screen and (max-width: $breakpoint-tablet) {
+			width: clamp(18rem, 70vw, 26rem);
+			margin-top: clamp(5rem, 10vh, 7rem);
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto auto;
+			grid-template-areas:
+				"image"
+				"header"
+				"text";
+		}
+
+		.h2--centered {
+			grid-area: header;
+			margin-bottom: 1rem;
+		}
+
+		&__img {
+			grid-area: image;
+			display: flex;
+
+			img {
+				width: clamp(5rem, 12vw + 1rem, 9rem);
+
+				@media screen and (max-width: $breakpoint-tablet) {
+					margin: 0 auto;
+					padding-bottom: 2rem;
+				}
+			}
+		}
+
+		&__text {
+			grid-area: text;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 0.5rem;
+			margin: 0 auto;
+			object-fit: fill;
+		}
+	}
+
+	&__bottom-container {
+		width: clamp(48rem, 85vw, 62.5rem);
+		height: auto;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: clamp(1rem, 7vh + 1rem, 4rem);
+
+		@media (max-width: $breakpoint-tablet) {
+			width: clamp(18rem, 70vw, 26rem);
+			flex-direction: column;
+		}
+
+		&__business-info {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding-left: 0.1rem;
+
+			@media screen and (max-width: $breakpoint-tablet) {
+				width: 100%;
+				order: 2;
+			}
+
+			.address {
+				display: flex;
+				flex-direction: column;
+
+				@media screen and (max-width: $breakpoint-tablet) {
+					margin: 0 auto;
+				}
+
+				h3 {
+					padding-bottom: clamp(1rem, 1vh + 1rem, 2.5rem);
+
+					@media screen and (max-width: $breakpoint-tablet) {
+						margin: 0 auto;
+						text-align: center;
+					}
+				}
+
+				p {
+					line-height: clamp(1rem, 1vh, 1.5rem);
+
+					@media screen and (max-width: $breakpoint-tablet) {
+						text-align: center;
+					}
+				}
+			}
+
+			.contact {
+				display: flex;
+				flex-direction: column;
+
+				@media screen and (max-width: $breakpoint-tablet) {
+					text-align: center;
+					margin: 0 auto;
+					margin-bottom: 1rem;
+				}
+
+				a {
+					margin: 0.5rem 0;
+				}
+			}
+
+			.contact-btn-row {
+				height: auto;
+				display: flex;
+				gap: clamp(0.8rem, 1.6vw, 1.5rem);
+
+				@media screen and (max-width: $breakpoint-tablet) {
+					margin: 0 auto;
+					order: 1;
+				}
+
+				img {
+					width: clamp(1.4rem, 4vw, 2.3rem);
+					height: auto;
+					transition: transform 0.3s ease-in-out;
+					cursor: pointer;
+
+					&:hover {
+						transform: scale(1.1);
+					}
+				}
+
+				&__form {
+					width: 50%;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-end;
+					align-items: left;
+
+					@media screen and (max-width: $breakpoint-tablet) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

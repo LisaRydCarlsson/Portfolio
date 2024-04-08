@@ -1,0 +1,290 @@
+// styling/pages/AboutPage.scss
+@import "../../index.scss";
+
+.about-page {
+	width: clamp(48rem, 85vw, 62.5rem);
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 11rem;
+
+	@media screen and (max-width: $breakpoint-tablet) {
+		width: clamp(18rem, 85vw, 26rem);
+		padding-top: 6rem;
+	}
+
+	h2 {
+		@media screen and (max-width: $breakpoint-small-desktop) {
+			width: 48rem;
+			margin-bottom: clamp(1rem, 1vh, 1.5rem);
+		}
+
+		@media screen and (max-width: $breakpoint-tablet) {
+			width: clamp(18rem, 85vw, 26rem);
+		}
+	}
+
+	&__fullwidth {
+		margin: 2rem 0;
+
+		@media screen and (max-width: $breakpoint-small-desktop) {
+			margin: 1rem 0;
+		}
+
+		@media screen and (max-width: $breakpoint-tablet) {
+			width: clamp(18rem, 85vw, 26rem);
+			display: flex;
+			flex-direction: column;
+		}
+
+		@media screen and (max-width: $breakpoint-mobile) {
+			margin: 0 auto;
+			margin-bottom: 1rem;
+		}
+
+		@include between($breakpoint-tablet, $breakpoint-small-desktop) {
+		}
+
+		&--last {
+			margin-bottom: 5rem;
+
+			@media screen and (max-width: $breakpoint-tablet) {
+				margin-bottom: 3rem;
+			}
+
+			@media screen and (max-width: $breakpoint-mobile) {
+				margin-bottom: 0;
+			}
+		}
+
+		&__storytelling,
+		&__solutions {
+			@include between($breakpoint-tablet, $breakpoint-small-desktop) {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+
+	&__photographer-section {
+		display: flex;
+		justify-content: space-between;
+		width: clamp(48rem, 85vw, 62.5rem);
+
+		@media screen and (max-width: $breakpoint-small-desktop) {
+			padding-top: 1.5rem;
+			align-items: flex-start;
+		}
+
+		@media screen and (max-width: $breakpoint-tablet) {
+			flex-direction: column;
+			width: clamp(18rem, 85vw, 26rem);
+		}
+
+		@include between($breakpoint-tablet, $breakpoint-small-desktop) {
+			padding-bottom: 3rem;
+		}
+
+		&--text {
+			width: 25rem;
+
+			@media screen and (max-width: $breakpoint-small-desktop) {
+				width: 22rem;
+			}
+
+			@media screen and (max-width: $breakpoint-tablet) {
+				width: clamp(18rem, 85vw, 26rem);
+			}
+		}
+
+		&--img {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@media screen and (max-width: $breakpoint-small-desktop) {
+				align-items: flex-start;
+			}
+
+			.about-interior-img {
+				width: 30rem;
+
+				@media screen and (max-width: $breakpoint-small-desktop) {
+					width: 23rem;
+				}
+
+				@media screen and (max-width: $breakpoint-tablet) {
+					width: clamp(18rem, 85vw, 26rem);
+					margin-bottom: 2rem;
+				}
+
+				@media screen and (max-width: $breakpoint-mobile) {
+					padding-bottom: 1rem;
+				}
+			}
+		}
+	}
+
+	&__designer-developer-section {
+		display: flex;
+		justify-content: space-between;
+		width: clamp(48rem, 85vw, 62.5rem);
+		gap: 2.5rem;
+
+		@media screen and (max-width: $breakpoint-tablet) {
+			width: clamp(18rem, 85vw, 26rem);
+			flex-direction: column;
+		}
+
+		@media screen and (max-width: $breakpoint-mobile) {
+			gap: 1rem;
+		}
+
+		&--text {
+			max-width: 40rem;
+
+			@media screen and (max-width: $breakpoint-small-desktop) {
+				max-width: 29rem;
+			}
+		}
+
+		&--img {
+			width: 20rem;
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@media screen and (max-width: $breakpoint-small-desktop) {
+				max-width: 18rem;
+			}
+
+			@media screen and (max-width: $breakpoint-tablet) {
+				width: 26rem;
+				margin: 0 auto;
+			}
+
+			.me-circle {
+				width: clamp(12rem, 30vw, 15rem);
+
+				@media screen and (max-width: $breakpoint-small-desktop) {
+					padding-bottom: 2rem;
+				}
+
+				@media screen and (max-width: $breakpoint-mobile) {
+					padding-bottom: 1rem;
+				}
+			}
+		}
+	}
+
+	&__globe-icon {
+		margin: 0 auto;
+		width: clamp(5rem, 10vw, 7rem);
+		height: auto;
+		margin-top: 1rem;
+		margin-bottom: 4rem;
+		transform: translateY(7rem);
+
+		@media screen and (max-width: $breakpoint-small-desktop) {
+			margin-bottom: 3rem;
+			transform: translateY(3rem);
+		}
+
+		@media screen and (max-width: $breakpoint-mobile) {
+			margin-top: 2rem;
+			transform: translateY(2rem);
+		}
+
+		&.slide-up {
+			animation: slide-up 2s ease-out forwards;
+
+			@media screen and (max-width: $breakpoint-small-desktop) {
+				animation: slide-up-small 1s ease-out forwards;
+			}
+
+			@media screen and (max-width: $breakpoint-mobile) {
+				animation: slide-up-mobile 1s ease-out forwards;
+			}
+		}
+	}
+
+	@keyframes slide-up {
+		0% {
+			transform: translateY(7rem);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes slide-up-small {
+		0% {
+			transform: translateY(3rem);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes slide-up-mobile {
+		0% {
+			transform: translateY(2rem);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	&__btn-row {
+		width: clamp(48rem, 85vw, 62.5rem);
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		gap: clamp(1rem, 2vw, 1.5rem);
+		margin-top: 1rem;
+		margin-bottom: clamp(8rem, 15vh, 13rem);
+
+		@media screen and (max-width: $breakpoint-tablet) {
+			width: 18rem;
+			flex-wrap: wrap;
+		}
+
+		@media screen and (max-width: $breakpoint-mobile) {
+			margin-top: 3rem;
+		}
+
+		.btn--connect {
+			@media screen and (max-width: $breakpoint-tablet) {
+				background-color: $secondary-color;
+			}
+		}
+	}
+}
+
+.read-more-section {
+	max-height: 50rem;
+	transition: max-height 0.5s ease-out;
+
+	@include between($breakpoint-tablet, $breakpoint-small-desktop) {
+		margin-bottom: 2rem;
+	}
+}
+
+.hidden {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease-out;
+}
+
+.read-more {
+	font-weight: 500;
+	line-height: 2.5rem;
+	letter-spacing: 0.15rem;
+	color: $accent-color;
+	cursor: pointer;
+
+	@media screen and (max-width: $breakpoint-mobile) {
+		font-size: 0.7rem;
+	}
+}

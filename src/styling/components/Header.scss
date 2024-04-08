@@ -1,0 +1,186 @@
+// styling/Header.scss
+@import "../../index.scss";
+@import "../../variables.scss";
+
+.header-container {
+	position: absolute;
+	z-index: 1;
+	width: clamp(20rem, 100vw, 87.5rem);
+	background-color: $primary-color;
+
+	header {
+		width: clamp(48rem, 85vw, 62.5rem);
+		margin: 0 auto;
+		position: relative;
+
+		@media screen and (max-width: $breakpoint-tablet) {
+			width: clamp(18rem, 70vw, 26rem);
+		}
+
+		.header__nav {
+			width: clamp(48rem, 85vw, 62.5rem);
+			margin: 0 auto;
+			top: 3rem;
+			display: flex;
+			justify-content: flex-end;
+
+			@media screen and (max-width: $breakpoint-tablet) {
+				display: none;
+			}
+
+			ul {
+				padding-top: 3rem;
+				display: flex;
+				gap: clamp(1.5rem, 2.5vw, 3rem);
+
+				li {
+					a {
+						display: inline-block;
+						text-decoration: none;
+						color: $secondary-color;
+						font-size: clamp(1.65rem, 2.5vw, 2.2rem);
+						letter-spacing: 0.5rem;
+						font-weight: 100;
+						line-height: 3.2rem;
+						transition: all 0.3s ease;
+						position: relative;
+
+						@media screen and (max-width: $breakpoint-small-desktop) {
+							letter-spacing: 0.4rem;
+						}
+
+						&::before {
+							content: "";
+							position: absolute;
+							width: 0;
+							height: 2px;
+							background-color: $accent-color;
+							bottom: 0;
+							left: 0;
+							transition: all 0.3s ease;
+						}
+
+						&:hover::before {
+							width: 100%;
+						}
+					}
+				}
+			}
+
+			.clicked {
+				color: $accent-color;
+			}
+		}
+
+		.hamburger-menu {
+			position: absolute;
+			top: 2rem;
+			left: 0;
+
+			.hamburger-icon {
+				color: $accent-color;
+				font-size: 2rem;
+				transition: transform 0.3s ease;
+				cursor: pointer;
+
+				.line {
+					display: block;
+					width: 2rem;
+					height: 3px;
+					margin: 7px 0;
+					border-radius: 2px;
+					background: $accent-color;
+					transition: all 0.3s ease;
+
+					@media screen and (max-width: $breakpoint-mobile) {
+						width: 1.8rem;
+						margin: 6px 0;
+					}
+
+					&.open {
+						&:nth-child(1) {
+							transform: rotate(-45deg) translate(-10px, 4px);
+						}
+
+						&:nth-child(2) {
+							opacity: 0;
+						}
+
+						&:nth-child(3) {
+							transform: rotate(45deg) translate(-10px, -4px);
+						}
+
+						@media screen and (max-width: $breakpoint-mobile) {
+							&:nth-child(1) {
+								transform: rotate(-45deg) translate(-9px, 3px);
+							}
+
+							&:nth-child(2) {
+								opacity: 0;
+							}
+
+							&:nth-child(3) {
+								transform: rotate(45deg) translate(-10px, -4px);
+							}
+						}
+					}
+				}
+			}
+
+			// Styling HamburgerMenu-ikon
+			button {
+				background: none;
+				border: none;
+				cursor: pointer;
+			}
+
+			ul {
+				width: 10rem;
+				height: auto;
+				border-radius: 0.5rem;
+				background: $primary-color;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				font-size: 1.3rem;
+				font-weight: 100;
+				list-style: none;
+				padding: 3rem 1rem 2rem 1rem;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+				opacity: 0;
+				transform: translateY(-20px);
+				transition: opacity 0.3s ease, transform 0.3s ease;
+
+				&.visible {
+					opacity: 1;
+					transform: translateY(0);
+				}
+
+				@media screen and (max-width: $breakpoint-mobile) {
+					width: 9rem;
+					font-size: 1.1rem;
+					padding: 2rem 1rem 1rem 1rem;
+				}
+
+				li {
+					margin-bottom: 2rem;
+
+					@media screen and (max-width: $breakpoint-mobile) {
+						margin-bottom: 1.7rem;
+					}
+
+					a {
+						text-decoration: none;
+						color: $secondary-color;
+						text-transform: lowercase;
+						padding-left: 1rem;
+
+						&.clicked {
+							color: $accent-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

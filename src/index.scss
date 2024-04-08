@@ -1,0 +1,320 @@
+// index.scss
+@import "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+	font-family: "Raleway", sans-serif;
+	letter-spacing: 0.1rem;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	list-style: none;
+	text-decoration: none;
+}
+
+html {
+	background-color: $background-color;
+	overflow-y: scroll;
+	scrollbar-width: none;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-wrapper {
+	flex: 1;
+	width: clamp(20rem, 100vw, 87.5rem);
+	height: 100%;
+	margin: 0 auto;
+
+	&--auto-height {
+		min-height: auto;
+	}
+
+	&--dark {
+		background-color: $primary-color;
+		color: $secondary-color;
+	}
+
+	&--white {
+		background-color: $secondary-color;
+		color: $primary-color;
+	}
+
+	&--orange {
+		background-color: $accent-color;
+		color: $primary-color;
+	}
+}
+
+.no-overflow {
+	width: clamp(20rem, 100vw, 87.5rem);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	height: 100vh;
+	background-color: $primary-color;
+	color: $secondary-color;
+}
+
+main {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+h1 {
+	font-size: clamp(0.8rem, 2.6vw, 1.9rem);
+	font-weight: 900;
+	line-height: 2.5rem;
+	letter-spacing: clamp(0.1rem, 0.25vw, 0.25rem);
+	transform: scaleY(1.03);
+	padding-bottom: 1.2rem;
+
+	@media screen and (max-width: $breakpoint-tablet) {
+		line-height: 1.8rem;
+		padding-bottom: 0.8rem;
+	}
+}
+
+h2,
+.h2--centered,
+.h2--2-line-centered {
+	font-size: clamp(0.95rem, 2.5vw, 1.5rem);
+	font-weight: 900;
+	line-height: 2.5rem;
+	letter-spacing: 0.3rem;
+	margin-bottom: 1rem;
+
+	@media screen and (max-width: $breakpoint-small-desktop) {
+		line-height: 2rem;
+	}
+
+	@media screen and (max-width: $breakpoint-tablet) {
+		letter-spacing: 0.1rem;
+	}
+}
+
+.h2--centered,
+.h2--2-line-centered {
+	text-align: center;
+}
+
+h3 {
+	font-size: clamp(0.8rem, 2.5vw, 1.25rem);
+	font-weight: 800;
+	letter-spacing: 0.2rem;
+
+	@media screen and (max-width: $breakpoint-tablet) {
+		letter-spacing: 0.1rem;
+	}
+}
+
+p,
+.link-p,
+label {
+	font-size: clamp(0.85rem, 2vw, 1rem);
+	font-weight: 200;
+	line-height: 2.25rem;
+	line-height: clamp(1.5rem, 5vw, 2.25rem);
+	letter-spacing: 0.15rem;
+	text-align: justify;
+	margin-bottom: 1rem;
+
+	@media screen and (max-width: $breakpoint-tablet) {
+		font-size: clamp(0.7rem, 2vw, 0.9rem);
+	}
+}
+
+.p--bold {
+	font-weight: 700;
+}
+
+a {
+	color: inherit;
+}
+
+// BUTTONS
+.btn--small,
+.btn--large {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 2rem;
+	font-size: clamp(0.7rem, 1.5vw, 1rem);
+	font-weight: 400;
+	letter-spacing: clamp(0.05rem, 0.3vw, 0.1rem);
+	cursor: pointer;
+}
+
+.btn--small {
+	width: clamp(5rem, 13vw, 8rem);
+	height: clamp(2.5rem, 5vh + 0.7rem, 3rem);
+
+	@media screen and (max-width: $breakpoint-tablet) {
+		height: clamp(2rem, 2.5vh + 0.7rem, 2.5rem);
+	}
+}
+
+.btn--large {
+	width: clamp(7rem, 15vw, 12rem);
+	height: clamp(2.5rem, 5vh + 0.7rem, 3rem);
+
+	@media screen and (max-width: $breakpoint-tablet) {
+		height: clamp(2rem, 2.5vh + 0.7rem, 2.5rem);
+	}
+}
+
+.btn--orange {
+	position: relative;
+	overflow: hidden;
+	background-color: $accent-color;
+	color: $primary-color;
+	font-weight: 600;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: $accent-color--light;
+		border-radius: 1.875rem;
+		transition: left 0.3s ease;
+		mix-blend-mode: multiply;
+	}
+
+	&:hover {
+		transform: scale(1.03);
+	}
+
+	&:hover::before {
+		left: 0;
+	}
+}
+
+.btn--dark {
+	background-color: $primary-color;
+	color: $secondary-color;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+
+	&:hover {
+		transform: scale(1.03);
+		background-color: $accent-color--dark;
+		color: $primary-color;
+		font-weight: 600;
+	}
+}
+
+.btn--white {
+	background-color: $secondary-color;
+	color: $primary-color;
+	font-weight: 600;
+
+	&:hover {
+		transform: scale(1.03);
+		background-color: $accent-color--dark;
+	}
+}
+
+// FOOTER
+.footer--orange {
+	margin: 0 auto;
+	margin-top: auto;
+	height: 2.5rem;
+	background-color: $accent-color--dark;
+	width: clamp(20rem, 100vw, 87.5rem);
+
+	@media screen and (max-width: $breakpoint-mobile) {
+		height: 2rem;
+	}
+}
+
+// FOOTER-ANIMATION PROJECTS & ABOUT
+.progress-bar {
+	max-width: 87.5rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2.5rem;
+	background: $accent-color--dark;
+	transform-origin: 0%;
+	z-index: 9999;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media screen and (max-width: $breakpoint-tablet) {
+		height: 2.2rem;
+	}
+}
+
+// ANIMATION FOR SMOOTH PAGE TRANSITION
+.fade-enter {
+	opacity: 0;
+}
+.fade-enter-active {
+	opacity: 1;
+	transition: opacity 300ms;
+}
+.fade-exit {
+	opacity: 1;
+}
+.fade-exit-active {
+	opacity: 0;
+	transition: opacity 300ms;
+}
+
+@keyframes fadeInAnimation {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+// HIDDEN/SHOWN ON SMALL DEVICES
+@mixin hide-on-device($breakpoint, $type: max) {
+	@media screen and (#{$type}-width: $breakpoint) {
+		display: none;
+	}
+}
+
+.hide-on-mobile {
+	@include hide-on-device($breakpoint-mobile);
+}
+
+.hide-on-tablet {
+	@include hide-on-device($breakpoint-tablet);
+}
+
+.hide-on-small-desktop {
+	@include hide-on-device($breakpoint-small-desktop);
+}
+
+.show-on-tablet {
+	@include hide-on-device(769px, min);
+}
+
+.hide-between-tablet-small-desktop {
+	@include between($breakpoint-tablet, $breakpoint-small-desktop) {
+		display: none;
+	}
+}
+
+.mobile-break {
+	display: none;
+
+	@media screen and (max-width: $breakpoint-mobile) {
+		display: block;
+	}
+}

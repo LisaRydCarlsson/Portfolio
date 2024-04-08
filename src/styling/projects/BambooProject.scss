@@ -1,0 +1,44 @@
+// styling/projectStyling/BambooProject.scss
+@import "../../index.scss";
+
+// .project-bamboo {
+// 	padding-bottom: 2.3rem;
+
+// 	&__container {
+// 		position: relative;
+// 		background-image: url("../../assets/img/bamboo-project.png");
+// 		width: 100%;
+// 		height: 44.5rem;
+// 		margin-top: 6rem;
+
+// 		@media screen and (max-width: $breakpoint-mobile) {
+// 			width: 18rem;
+// 		}
+
+// 		&__text {
+// 			position: absolute;
+// 			bottom: 3.5rem;
+// 			left: 50%;
+// 			transform: translateX(-50%);
+// 			text-shadow: 2px 2px 4px $primary-color;
+// 			text-align: justify;
+// 			width: 80%;
+
+// 			h1 {
+// 				text-align: center;
+// 			}
+// 		}
+// 	}
+
+// 	&__btn-container {
+// 		width: 62.5rem;
+// 		display: flex;
+// 		justify-content: space-between;
+// 		margin: 2rem 0;
+
+// 		&__icons {
+// 			display: flex;
+// 			gap: 1rem;
+// 		}
+// 	}
+// }

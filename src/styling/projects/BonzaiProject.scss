@@ -1,0 +1,82 @@
+// // styling/projectStyling/BonzaiProject.scss
+// @import "../../index.scss";
+
+// .project-bonzai {
+// 	width: 87.5rem;
+// 	min-height: auto;
+// 	padding: 4rem 0 3rem 0;
+
+// 	@media screen and (max-width: $breakpoint-mobile) {
+// 		margin: 0 auto;
+// 		width: 22rem;
+// 		padding-top: 3rem;
+// 	}
+
+// 	&__container {
+// 		width: 62.5rem;
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: center;
+// 		align-items: center;
+// 		margin: 0 auto;
+
+// 		@media screen and (max-width: $breakpoint-mobile) {
+// 			width: 18rem;
+// 			padding-top: 0rem;
+// 		}
+
+// 		&__img {
+// 			width: 40rem;
+// 			margin-bottom: 3rem;
+
+// 			@media screen and (max-width: $breakpoint-mobile) {
+// 				width: 18rem;
+// 			}
+// 		}
+
+// 		&__text {
+// 			bottom: 3.5rem;
+// 			text-align: justify;
+// 			width: 62.5rem;
+
+// 			@media screen and (max-width: $breakpoint-mobile) {
+// 				width: 18rem;
+// 			}
+
+// 			h2,
+// 			p {
+// 				color: $primary-color;
+// 			}
+
+// 			h2 {
+// 				@media screen and (max-width: $breakpoint-mobile) {
+// 					line-height: 1.8rem;
+// 					margin-bottom: 1rem;
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	&__btn-container {
+// 		margin: 0 auto;
+// 		width: 62.5rem;
+// 		display: flex;
+// 		justify-content: space-between;
+
+// 		@media screen and (max-width: $breakpoint-mobile) {
+// 			width: 18rem;
+// 			margin-top: 2rem;
+// 		}
+
+// 		&__icons {
+// 			display: flex;
+// 			gap: 1rem;
+
+// 			@media screen and (max-width: $breakpoint-mobile) {
+// 				width: 2.3rem;
+// 				height: 2.3rem;
+// 				gap: 0.5rem;
+// 			}
+// 		}
+// 	}
+// }

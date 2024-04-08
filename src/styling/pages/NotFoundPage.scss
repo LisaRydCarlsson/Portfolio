@@ -1,0 +1,58 @@
+@import "../../index.scss";
+
+.page-wrapper--not-found {
+	width: clamp(20rem, 100vw, 87.5rem);
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.not-found-content {
+		width: clamp(20rem, 100vw, 87.5rem);
+		min-height: 100vh;
+
+		&__main-container {
+			width: clamp(18rem, 60vw, 50rem);
+			margin: 0 auto;
+			margin-top: clamp(2rem, 25vh, 7rem);
+			margin-bottom: clamp(2rem, 15vh, 3rem);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			@media screen and (max-height: $breakpoint-small-mobile) {
+				margin-top: clamp(3rem, 10vh, 5rem);
+			}
+
+			img {
+				width: clamp(7rem, 30vw, 18rem);
+				margin-bottom: clamp(2rem, 6vh, 5rem);
+			}
+
+			&__text {
+				display: flex;
+				flex-direction: column;
+				gap: clamp(0.5rem, 2vw, 1rem);
+
+				h1,
+				p {
+					text-align: center;
+				}
+			}
+
+			&__btn-row {
+				width: clamp(18rem, 60vw, 50rem);
+				display: flex;
+				justify-content: center;
+				gap: clamp(0.5rem, 2vw, 1.5rem);
+				margin-top: clamp(1rem, 5vh, 4rem);
+
+				&__btn {
+					width: clamp(5.5rem, 22vw, 11rem);
+					font-size: clamp(0.5rem, 2vw, 1rem);
+				}
+			}
+		}
+	}
+}
