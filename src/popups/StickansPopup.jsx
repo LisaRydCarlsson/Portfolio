@@ -1,4 +1,3 @@
-// components/popups/ProPopup.jsx
 import "../styling/popup/PopupGeneral.scss";
 import React, { useEffect, useRef } from "react";
 import StickansStart from "../assets/img/stickans-start.png";
@@ -20,7 +19,6 @@ const StickansPopup = React.forwardRef((props, ref) => {
 					</section>
 					<section className="popup__textImg-container">
 						<section className="popup__textImg-container__flexbox">
-							{/* <section className="popup__textImg-container__flexbox__text"> */}
 							<section className="popup__textImg-container__flexbox__text--left">
 								<h2 className="h2--2-line-centered">
 									THE MOBILE APP <br /> FOR A UTILITY LIBRARY
@@ -46,7 +44,6 @@ const StickansPopup = React.forwardRef((props, ref) => {
 									ensuring security and ease of access for users.
 								</p>
 							</section>
-							{/* </section> */}
 							<div className="popup__textImg-container__flexbox__img--right">
 								<img
 									className="stickans-img-01"
@@ -65,7 +62,6 @@ const StickansPopup = React.forwardRef((props, ref) => {
 									alt="Stickans Library image"
 								/>
 							</div>
-							{/* <section className="popup__textImg-container__flexbox__text"> */}
 							<section className="popup__textImg-container__flexbox__text--right">
 								<p>
 									With a simple search and selection interface, residents can
@@ -86,7 +82,6 @@ const StickansPopup = React.forwardRef((props, ref) => {
 									resourceful future.
 								</p>
 							</section>
-							{/* </section> */}
 						</section>
 					</section>
 					<section className="popup__btnRow--figma">

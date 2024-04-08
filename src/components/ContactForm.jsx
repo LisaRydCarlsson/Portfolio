@@ -1,4 +1,3 @@
-// components/ContactForm.jsx
 import "../styling/components/ContactForm.scss";
 import React, { useState, useEffect, useRef } from "react";
 import Lottie from "react-lottie";

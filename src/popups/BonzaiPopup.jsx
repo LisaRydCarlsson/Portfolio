@@ -1,4 +1,3 @@
-// components/popups/BonzaiPopup.jsx
 import "../styling/popup/PopupGeneral.scss";
 import React, { useEffect, useRef } from "react";
 import BonzaiPopup01 from "../assets/img/bonzai-popup-01.png";
@@ -18,7 +17,6 @@ const BonzaiPopup = React.forwardRef((props, ref) => {
 					</section>
 					<section className="popup__textImg-container">
 						<section className="popup__textImg-container__flexbox">
-							{/* <section className="popup__textImg-container__flexbox__text"> */}
 							<section className="popup__textImg-container__flexbox__text--left bonzai-first-text">
 								<h2 className="h2--centered">THE FUTURISTIC ECO RESORT</h2>
 								<p>
@@ -39,7 +37,6 @@ const BonzaiPopup = React.forwardRef((props, ref) => {
 									meticulously crafted design system.
 								</p>
 							</section>
-							{/* </section> */}
 							<div className="popup__textImg-container__flexbox__img--right">
 								<img
 									className="popup-flex-img bonzai-img-01"

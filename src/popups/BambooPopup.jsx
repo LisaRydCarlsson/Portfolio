@@ -1,4 +1,3 @@
-// components/popups/BambooPopup.jsx
 import "../styling/popup/PopupGeneral.scss";
 import React, { useEffect, useRef } from "react";
 import BambooPopup01 from "../assets/img/bamboo-popup-01.png";
@@ -38,7 +37,7 @@ const BambooPopup = React.forwardRef((props, ref) => {
 									alt="Bamboo Bites Home image"
 								/>
 							</div>
-							{/* <section className="popup__textImg-container__flexbox__text"> */}
+
 							<section className="popup__textImg-container__flexbox__text--right">
 								<p>
 									To ensure a user-centered design process, we have utilized the
@@ -54,12 +53,10 @@ const BambooPopup = React.forwardRef((props, ref) => {
 									design ensures a smooth user experience across devices.
 								</p>
 							</section>
-							{/* </section> */}
 						</section>
 					</section>
 					<section className="popup__textImg-container flex-img-text-dark">
 						<section className="popup__textImg-container__flexbox">
-							{/* <section className="popup__textImg-container__flexbox__text"> */}
 							<section className="popup__textImg-container__flexbox__text--left">
 								<p>
 									On the backend, we have leveraged modern tools and
@@ -73,7 +70,7 @@ const BambooPopup = React.forwardRef((props, ref) => {
 									Bites wherever they may be.
 								</p>
 							</section>
-							{/* </section> */}
+
 							<div className="popup__textImg-container__flexbox__img--right">
 								<img
 									className="bamboo-img-02"

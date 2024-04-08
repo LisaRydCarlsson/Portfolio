@@ -1,4 +1,3 @@
-// components/popups/CircusPopup.jsx
 import "../styling/popup/PopupGeneral.scss";
 import React, { useEffect, useRef } from "react";
 import CircusPopup01 from "../assets/img/circus-popup-01.png";
@@ -42,7 +41,6 @@ const CircusPopup = React.forwardRef((props, ref) => {
 									alt="Circus Carneval image"
 								/>
 							</div>
-							{/* <section className="popup__textImg-container__flexbox__text"> */}
 							<section className="popup__textImg-container__flexbox__text--right">
 								<p>
 									Inspired by the whimsical delights of Mardi Gras and the
@@ -57,12 +55,10 @@ const CircusPopup = React.forwardRef((props, ref) => {
 									irresistible energy.
 								</p>
 							</section>
-							{/* </section> */}
 						</section>
 					</section>
 					<section className="popup__textImg-container">
 						<section className="popup__textImg-container__flexbox">
-							{/* <section className="popup__textImg-container__flexbox__text"> */}
 							<section className="popup__textImg-container__flexbox__text--left">
 								<p>
 									With the help of the anime.js library and a understanding of
@@ -75,7 +71,6 @@ const CircusPopup = React.forwardRef((props, ref) => {
 									awaiting exploration.
 								</p>
 							</section>
-							{/* </section> */}
 							<div className="popup__textImg-container__flexbox__img--right">
 								<img
 									className="circus-img-02"

@@ -1,4 +1,3 @@
-// components/GoBackBtn.jsx
 import React from "react";
 
 const GoBackBtn = ({ buttonColor = "btn--orange", className }) => {

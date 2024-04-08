@@ -1,4 +1,3 @@
-// componenets/ReadMore.jsx
 import React, { useState } from "react";
 import "../index.scss";
 

@@ -1,4 +1,3 @@
-// page/HomePage.jsx
 import React, { useEffect, useRef } from "react";
 import cvIcon from "../assets/icons/cv-icon.png";
 import emailIcon from "../assets/icons/email-icon.png";

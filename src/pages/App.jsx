@@ -1,4 +1,3 @@
-// pages/App.jsx
 import React, { useState } from "react";
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import Header from "../components/Header.jsx";
@@ -38,13 +37,3 @@ function ConditionalHeader() {
 }
 
 export default App;
-
-// function ConditionalHeader() {
-// 	const location = useLocation();
-
-// 	if (location.pathname.includes("popup")) {
-// 		return null;
-// 	}
-
-// 	return <Header />;
-// }

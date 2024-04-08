@@ -1,4 +1,3 @@
-// components/popups/ProPopup.jsx
 import "../styling/popup/PopupGeneral.scss";
 import React, { useEffect, useRef } from "react";
 import proStart from "../assets/img/pro-start.png";
@@ -20,7 +19,6 @@ const ProPopup = React.forwardRef((props, ref) => {
 					</section>
 					<section className="popup__textImg-container">
 						<section className="popup__textImg-container__flexbox">
-							{/* <section className="popup__textImg-container__flexbox__text"> */}
 							<section className="popup__textImg-container__flexbox__text--left">
 								<h2 className="h2--2-line-centered">
 									THE E-MAIL CLIENT <br /> FOR SENIORS
@@ -43,7 +41,6 @@ const ProPopup = React.forwardRef((props, ref) => {
 									impairments could navigate with ease.
 								</p>
 							</section>
-							{/* </section> */}
 							<div className="popup__textImg-container__flexbox__img--right">
 								<img
 									className="pro-img-01"
@@ -62,7 +59,6 @@ const ProPopup = React.forwardRef((props, ref) => {
 									alt="Pro Inbox image"
 								/>
 							</div>
-							{/* <section className="popup__textImg-container__flexbox__text"> */}
 							<section className="popup__textImg-container__flexbox__text--right">
 								<p>
 									Accessibility was paramount, with features such as adjustable
@@ -79,7 +75,6 @@ const ProPopup = React.forwardRef((props, ref) => {
 									button below.
 								</p>
 							</section>
-							{/* </section> */}
 						</section>
 					</section>
 					<section className="popup__btnRow--figma">

@@ -1,4 +1,3 @@
-// routes/AppRoutes.jsx
 import React, { useRef } from "react";
 import { Routes, Route } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
@@ -6,7 +5,6 @@ import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
 import HomePage from "../pages/HomePage";
 import NotFoundPage from "../pages/NotFoundPage";
-// import ProjectPage from "../pages/ProjectPage";
 import ProjectsPage from "../pages/ProjectsPage";
 import BambooPopup from "../popups/BambooPopup";
 import BonzaiPopup from "../popups/BonzaiPopup";

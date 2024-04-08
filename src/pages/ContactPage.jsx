@@ -1,4 +1,3 @@
-// pages/ContactPage
 import "../styling/pages/ContactPage.scss";
 import React, { useRef } from "react";
 import AvatarImg from "../assets/img/lisa-avatar.png";

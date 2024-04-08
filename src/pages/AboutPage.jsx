@@ -1,4 +1,3 @@
-// pages/AboutPage
 import "../styling/pages/AboutPage.scss";
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";

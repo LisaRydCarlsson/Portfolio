@@ -1,4 +1,3 @@
-// // pages/ProjectPage.jsx
 import "../index.scss";
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
