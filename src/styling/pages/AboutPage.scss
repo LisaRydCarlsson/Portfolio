@@ -184,7 +184,7 @@
 		height: auto;
 		margin-top: 1rem;
 		margin-bottom: 4rem;
-		transform: translateY(7rem);
+		transform: translateY(4rem);
 
 		@media screen and (max-width: $breakpoint-small-desktop) {
 			margin-bottom: 3rem;
@@ -211,7 +211,7 @@
 
 	@keyframes slide-up {
 		0% {
-			transform: translateY(7rem);
+			transform: translateY(4rem);
 		}
 		100% {
 			transform: translateY(0);
