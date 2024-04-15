@@ -1,4 +1,3 @@
-// styling/HomePage.scss
 @import "src/index.scss";
 
 .page-wrapper-home {
@@ -40,6 +39,7 @@
 			@media screen and (max-width: $breakpoint-mobile) {
 				width: 18rem;
 				margin-bottom: 0rem;
+				line-height: 2.2rem;
 			}
 
 			#cursor {

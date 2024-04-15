@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styling/components/Header.scss";
+import "../styling/components/HamburgerMenu.scss";
 
 const HamburgerMenu = ({ handleLinkClick, activePath }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -12,10 +12,12 @@ const HamburgerMenu = ({ handleLinkClick, activePath }) => {
 	return (
 		<div className="hamburger-menu">
 			<button onClick={toggleMenu}>
-				<div className="hamburger-icon">
-					<span className={`line ${isOpen ? "open" : ""}`}></span>
-					<span className={`line ${isOpen ? "open" : ""}`}></span>
-					<span className={`line ${isOpen ? "open" : ""}`}></span>
+				<div className="hamburger-icon-wrapper">
+					<div className="hamburger-icon">
+						<span className={`line ${isOpen ? "open" : ""}`}></span>
+						<span className={`line ${isOpen ? "open" : ""}`}></span>
+						<span className={`line ${isOpen ? "open" : ""}`}></span>
+					</div>
 				</div>
 			</button>
 			<ul className={isOpen ? "visible" : ""}>
