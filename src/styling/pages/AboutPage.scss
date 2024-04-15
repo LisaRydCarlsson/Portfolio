@@ -10,18 +10,17 @@
 	padding-top: 11rem;
 
 	@media screen and (max-width: $breakpoint-tablet) {
-		width: clamp(18rem, 85vw, 26rem);
+		width: clamp(18rem, 70vw, 26rem);
 		padding-top: 6rem;
 	}
 
 	h2 {
 		@media screen and (max-width: $breakpoint-small-desktop) {
-			width: 48rem;
 			margin-bottom: clamp(1rem, 1vh, 1.5rem);
 		}
 
 		@media screen and (max-width: $breakpoint-tablet) {
-			width: clamp(18rem, 85vw, 26rem);
+			width: clamp(18rem, 70vw, 26rem);
 		}
 	}
 
@@ -33,7 +32,7 @@
 		}
 
 		@media screen and (max-width: $breakpoint-tablet) {
-			width: clamp(18rem, 85vw, 26rem);
+			width: clamp(18rem, 70vw, 26rem);
 			display: flex;
 			flex-direction: column;
 		}
@@ -63,6 +62,10 @@
 			@include between($breakpoint-tablet, $breakpoint-small-desktop) {
 				margin-bottom: 3rem;
 			}
+
+			@media screen and (max-width: $breakpoint-mobile) {
+				margin-bottom: 2.5rem;
+			}
 		}
 	}
 
@@ -78,7 +81,7 @@
 
 		@media screen and (max-width: $breakpoint-tablet) {
 			flex-direction: column;
-			width: clamp(18rem, 85vw, 26rem);
+			width: clamp(18rem, 70vw, 26rem);
 		}
 
 		@include between($breakpoint-tablet, $breakpoint-small-desktop) {
@@ -86,14 +89,14 @@
 		}
 
 		&--text {
-			width: 25rem;
+			width: 28rem;
 
 			@media screen and (max-width: $breakpoint-small-desktop) {
-				width: 22rem;
+				width: 27rem;
 			}
 
 			@media screen and (max-width: $breakpoint-tablet) {
-				width: clamp(18rem, 85vw, 26rem);
+				width: clamp(18rem, 70vw, 26rem);
 			}
 		}
 
@@ -114,7 +117,7 @@
 				}
 
 				@media screen and (max-width: $breakpoint-tablet) {
-					width: clamp(18rem, 85vw, 26rem);
+					width: clamp(18rem, 70vw, 26rem);
 					margin-bottom: 2rem;
 				}
 
@@ -126,14 +129,14 @@
 	}
 
 	&__designer-developer-section {
-		display: flex;
-		justify-content: space-between;
-		width: clamp(48rem, 85vw, 62.5rem);
+		display: grid;
+		grid-template-columns: 2fr 1fr;
 		gap: 2.5rem;
+		width: clamp(48rem, 85vw, 62.5rem);
 
 		@media screen and (max-width: $breakpoint-tablet) {
-			width: clamp(18rem, 85vw, 26rem);
-			flex-direction: column;
+			grid-template-columns: 1fr;
+			width: clamp(18rem, 70vw, 26rem);
 		}
 
 		@media screen and (max-width: $breakpoint-mobile) {
@@ -141,34 +144,31 @@
 		}
 
 		&--text {
-			max-width: 40rem;
-
-			@media screen and (max-width: $breakpoint-small-desktop) {
-				max-width: 29rem;
+			@media screen and (max-width: $breakpoint-tablet) {
+				order: 2;
 			}
 		}
 
 		&--img {
-			width: 20rem;
-			height: auto;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
-			@media screen and (max-width: $breakpoint-small-desktop) {
-				max-width: 18rem;
-			}
+			width: 100%;
 
 			@media screen and (max-width: $breakpoint-tablet) {
-				width: 26rem;
-				margin: 0 auto;
+				order: 1;
 			}
 
 			.me-circle {
-				width: clamp(12rem, 30vw, 15rem);
+				width: 85%;
 
 				@media screen and (max-width: $breakpoint-small-desktop) {
+					width: 100%;
 					padding-bottom: 2rem;
+				}
+
+				@media screen and (max-width: $breakpoint-tablet) {
+					width: 70%;
 				}
 
 				@media screen and (max-width: $breakpoint-mobile) {
@@ -184,56 +184,16 @@
 		height: auto;
 		margin-top: 1rem;
 		margin-bottom: 4rem;
-		transform: translateY(4rem);
 
 		@media screen and (max-width: $breakpoint-small-desktop) {
-			margin-bottom: 3rem;
-			transform: translateY(3rem);
+			margin-top: 0rem;
+			margin-bottom: 4rem;
 		}
 
-		@media screen and (max-width: $breakpoint-mobile) {
-			margin-top: 2rem;
-			transform: translateY(2rem);
-		}
-
-		&.slide-up {
-			animation: slide-up 2s ease-out forwards;
-
-			@media screen and (max-width: $breakpoint-small-desktop) {
-				animation: slide-up-small 1s ease-out forwards;
-			}
-
-			// @media screen and (max-width: $breakpoint-mobile) {
-			// 	animation: slide-up-mobile 1s ease-out forwards;
-			// }
+		@media screen and (max-width: $breakpoint-tablet) {
+			margin-top: 1rem;
 		}
 	}
-
-	@keyframes slide-up {
-		0% {
-			transform: translateY(4rem);
-		}
-		100% {
-			transform: translateY(0);
-		}
-	}
-
-	@keyframes slide-up-small {
-		0% {
-			transform: translateY(3rem);
-		}
-		100% {
-			transform: translateY(0);
-		}
-	}
-
-	// @keyframes slide-up-mobile {
-	// 	0% {
-	// 		transform: translateY(2rem);
-	// 	}
-	// 	100% {
-	// 		transform: translateY(0);
-	// 	}
 
 	&__btn-row {
 		width: clamp(48rem, 85vw, 62.5rem);

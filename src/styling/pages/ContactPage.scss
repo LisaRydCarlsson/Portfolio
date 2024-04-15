@@ -46,6 +46,10 @@
 			grid-area: header;
 			margin-bottom: 1rem;
 
+			@media screen and (min-width: 872px) and (max-width: 982px) {
+				font-size: 1.14rem;
+			}
+
 			@media (min-width: 769px) {
 				margin-bottom: 2rem;
 			}

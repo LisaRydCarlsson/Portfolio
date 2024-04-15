@@ -57,7 +57,7 @@ const ContactForm = () => {
 		setFormSubmitted(true);
 		setShowConfirmation(true);
 
-		setTimeout(() => window.location.reload(), 2500);
+		setTimeout(() => window.location.reload(), 4000);
 	};
 
 	const closeConfirmation = () => {

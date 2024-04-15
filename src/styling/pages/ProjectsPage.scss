@@ -286,3 +286,14 @@ $up-caret-icon: url("../../assets/icons/up-caret-icon.png");
 	margin: 0 auto;
 	margin-top: 5rem;
 }
+
+.line-break {
+	display: none;
+}
+
+@media screen and (min-width: 890px) and (max-width: 1024px),
+	screen and (min-width: 1225px) {
+	.line-break {
+		display: block;
+	}
+}

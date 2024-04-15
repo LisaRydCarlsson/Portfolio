@@ -1,5 +1,6 @@
 import "../styling/pages/ProjectsPage.scss";
 import React, { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import { motion, useScroll } from "framer-motion";
 import ScrollToTop from "../components/ScrollToTop";
@@ -19,6 +20,9 @@ import cssIcon from "../assets/icons/css-icon-wht.png";
 import jsIcon from "../assets/icons/js-icon-wht.png";
 
 const ProjectsPage = React.forwardRef((props, ref) => {
+	const isMediumOrLargeScreen = useMediaQuery({
+		query: "(min-width: 890px) and (max-width: 1024px), (min-width: 1360px)",
+	});
 	const { scrollYProgress } = useScroll();
 
 	return (
@@ -68,9 +72,8 @@ const ProjectsPage = React.forwardRef((props, ref) => {
 						<div className="project-pro__container__info">
 							<div className="project-pro__container__info__text">
 								<h1>
-									AN E-MAIL CLIENT
-									<span className="space"> </span>
-									<br className="mobile-break" />
+									AN E-MAIL CLIENT{isMediumOrLargeScreen ? null : " "}
+									<br className="line-break" />
 									FOR SENIORS
 								</h1>
 								<p>
@@ -147,12 +150,10 @@ const ProjectsPage = React.forwardRef((props, ref) => {
 						<div className="project-stickans__container__info">
 							<div className="project-stickans__container__info__text">
 								<h1>
-									A UTILITY LIBRARY
-									<span className="space"> </span>
-									<br className="break" />
+									A UTILITY LIBRARY{isMediumOrLargeScreen ? null : " "}
+									<br className="line-break" />
 									MOBILE APP
 								</h1>
-
 								<p>
 									Welcome to Stickan’s Tool Library – where borrowing is the new
 									owning! In a world consumed by ownership, Stickan’s community
